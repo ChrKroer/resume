@@ -11,3 +11,7 @@ christian_kroer_cv.out
 christian_kroer_cv.pdf
 christian_kroer_cv.run.xml
 christian_kroer_cv.synctex.gz
+*.aux
+*.bbl
+*.blg
+*.run.xml
