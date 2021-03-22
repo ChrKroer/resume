@@ -104,7 +104,7 @@
 % \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 % \quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
-% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 % \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
@@ -139,7 +139,7 @@
 \makeatother
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 \usepackage[resetlabels]{multibib}
-\newcites{published,workshop}{{Published papers},
+\newcites{working,published,workshop}{{Journal papers in progress},{Published papers},
   {Workshop papers}}
 
 
@@ -169,6 +169,7 @@
 \section{Employment and Internships}
 %\subsection{Vocational}
 \cventry{2019--}{Columbia University}{Assistant Professor}{}{}{}{}
+\cventry{2019--2020}{Facebook, Core Data Science}{Research Scientist (1 day per week)}{}{}{}{}
 \cventry{2018--2019}{Facebook, Core Data Science}{Postdoc}{}{}{}{}
 \cventry{2012--2018}{Carnegie Mellon University}{Research Assistant}{}{}{}{}
 \cventry{2016--2018}{Facebook, Core Data Science}{Research Scientist (part-time position)}{}{}{}{}
@@ -210,9 +211,15 @@
 
 
 \section{Publications}
+
+\nociteworking{*}
+\bibliographystyleworking{unsrt}
+\bibliographyworking{working_papers}
+
 \nocitepublished{*}
 \bibliographystylepublished{unsrt}
 \bibliographypublished{christian_kroer_publications}
+
 \nociteworkshop{*}
 \bibliographystyleworkshop{unsrt}
 \bibliographyworkshop{workshop_papers}
@@ -289,8 +296,14 @@
 
 
 \section{Service}
+\cvitem{Ph.D. Advisor}{
+  Chia-Hao Chang,
+  Yuan Gao,
+  Rachitesh Kumar,
+  Tyler Will
+}
 \cvitem{Thesis committee/review}{
-  Jalaj Bhandari, IEOR at Columbia University, 2020,
+  IEOR at Columbia University: Jalaj Bhandari, Yunhao Tang, Yi Ren, Sai Mali Ananth
   Andrea Celli, Information Technology at Politecnico di Milano, 2019,
 }
 \cvitem{Senior Program Committee}
@@ -302,7 +315,7 @@
 {
   AAAI 2019,
   DAI 2019,
-  EC 2019, 2020,
+  EC 2019, 2020, 2021
   IJCAI 2016, 2018, 2019,
   NeurIPS 2020,
   WEB 2020,
@@ -315,17 +328,21 @@
   AISTATS 2017,
   Artificial Intelligence 2018, 2019,
   EC 2017,
+  Games and Economic Behavior, 2021,
   ICML 2016,
   IJCAI 2016, 2018,
   Imperfect-Information Games Workshop 2018,
+  Information Systems Research 2021,
   IPCO 2020,
-  Operations Research 2018, 2019
+  Management Science, 2020, 2021,
+  Operations Research 2018, 2019, 2020, 2021
   JAAMAS 2015, 2016,
   TARK 2017,
   Transactions on Computational Intelligence and AI in Games 2014, 2015,
   WINE 2015, 2019
 }
 \cvitem{Societies}{INFORMS, AAAI, ACM}
+\cvitem{2020 - }{Columbia IEOR Ph.D. admissions committee member}
 \cvitem{2017 - 2018}{Member of the CMU CSD Speakers Club}
 \cvitem{2014 - 2016}{CMU CS Ph.D. admissions committee member}
 \cvitem{2013}{CMU CSD Immigration Course coordinator}
