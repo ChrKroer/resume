@@ -91,7 +91,7 @@
 \social[linkedin]{chrkroer}                        % optional, remove / comment the line if not wanted
 % \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{ChrKroer}                              % optional, remove / comment the line if not wanted
-\extrainfo{US green card holder}                 % optional, remove / comment the line if not wanted
+% \extrainfo{US green card holder}                 % optional, remove / comment the line if not wanted
 % \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 % \quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
@@ -216,11 +216,11 @@ A few papers are ordered by contribution, and are marked with $^\gamma$.
 I have \underline{underlined} names of Columbia students where I acted as
 the senior advisor or senior coadvisor on the project.
 
-Citation metrics as of Oct 1st, 2023 (source: google scholar):
+Citation metrics as of Jan 18th, 2024 (source: google scholar):
 \begin{itemize}
-\item Total citations: 1502
-\item h-index: 23
-\item i10-index: 49
+\item Total citations: 1614
+\item h-index: 25
+\item i10-index: 53
 \end{itemize}
 
 I primarily publish in two communities: the AI, economics, and computation
@@ -249,7 +249,11 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 
 \nocitepublished{*}
 \bibliographystylepublished{unsrt}
+\ifpromotion
+\bibliographypublished{christian_kroer_publications_promotion}
+\else
 \bibliographypublished{christian_kroer_publications}
+\fi
 
 \nociteworkshop{*}
 \bibliographystyleworkshop{unsrt}
