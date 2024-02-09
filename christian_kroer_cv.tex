@@ -73,15 +73,16 @@
 %   {\item}
 
 \newif\ifpromotion
-% \promotiontrue
-\promotionfalse
+\promotiontrue
+% \promotionfalse
 
 
 
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% \setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
+\renewcommand*{\namefont}{\fontsize{38}{40}\mdseries\upshape}
 \name{Christian}{Kroer}
 \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
 % \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
@@ -130,7 +131,7 @@
 \makeatother
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 \usepackage[resetlabels]{multibib}
-\newcites{working,published,workshop}{{Journal papers in progress},{Published papers},
+\newcites{working,publishedjournal,publishedconf,workshop}{{Journal papers in progress},{Published journal papers},{Published conference papers},
   {Workshop papers}}
 
 
@@ -163,7 +164,7 @@ Last update: \today
 
 \section{Employment and Internships}
 %\subsection{Vocational}
-\cventry{2019--}{Columbia University}{Assistant Professor}{}{}{}{}
+\cventry{2019--}{Columbia University, Industrial Engineering and Operations Research}{Assistant Professor}{}{}{}{}
 \cventry{2019--2020}{Facebook, Core Data Science}{Research Scientist (1 day per week)}{}{}{}{}
 \cventry{2018--2019}{Facebook, Core Data Science}{Postdoc}{}{}{}{}
 \cventry{2012--2018}{Carnegie Mellon University}{Research Assistant}{}{}{}{}
@@ -247,13 +248,17 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 \bibliographystyleworking{unsrt}
 \bibliographyworking{working_papers}
 
-\nocitepublished{*}
-\bibliographystylepublished{unsrt}
-\ifpromotion
-\bibliographypublished{christian_kroer_publications_promotion}
-\else
-\bibliographypublished{christian_kroer_publications}
-\fi
+\nocitepublishedjournal{*}
+\bibliographystylepublishedjournal{unsrt}
+\nocitepublishedconf{*}
+\bibliographystylepublishedconf{unsrt}
+% \ifpromotion
+\bibliographypublishedjournal{christian_kroer_publications_journal_promotion}
+\bibliographypublishedconf{christian_kroer_publications_conference_promotion}
+% \else
+% \bibliographypublishedjournal{christian_kroer_publications_journal}
+% \bibliographypublishedconference{christian_kroer_publications_conference}
+% \fi
 
 \nociteworkshop{*}
 \bibliographystyleworkshop{unsrt}
@@ -365,12 +370,15 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 \cventry{2012}{MS class, TA}{Intelligent Systems Programming}{IT University of Copenhagen}{}{}{}
 \cventry{2011}{MS class, TA}{Algorithm Design}{IT University of Copenhagen}{}{}{}
 
-\section{Ph.D. Advising}
+\section{Ph.D. Advising - Current Students}
 % \cventry{2022-}{Co-advised with Jay Sethuraman}{Neel Karia}{IEOR, Columbia University}{}{}{}
 \cventry{2023-}{}{Salam Afiouni}{IEOR, Columbia University}{}{}{}
 \cventry{2022-}{}{Tianlong Nan}{IEOR, Columbia University}{}{}{}
 \cventry{2021-}{}{Darshan Chakrabarti}{IEOR, Columbia University}{}{}{}
 \cventry{2021-}{}{Luofeng Liao}{IEOR, Columbia University}{}{}{}
+\cventry{2019-}{Co-advised with Santiago Balseiro}{Rachitesh Kumar}{IEOR, Columbia University}{}{}{}
+
+\section{Ph.D. Advising - Graduated Students}
 % \cventry{2019-2022}{}{Yuan Gao}{IEOR, Columbia University}{}{Current Position:
 %   Data Scientist, Microsoft}{\scriptsize New Optimization Models and Methods
 
@@ -380,8 +388,7 @@ For OR, impact is primarily measured by publication in the top-tier journals:
   % {\scriptsize New Optimization Models and Methods for Classical, Infinite-Dimensional, and Online Fisher Markets}
   {IEOR, Columbia University}
   {}
-  {Thesis: New Optimization Models and Methods for Classical, \newline Infinite-Dimensional, and Online Fisher Markets}
-\cventry{2019-}{Co-advised with Santiago Balseiro}{Rachitesh Kumar}{IEOR, Columbia University}{}{}{}
+  {Thesis title: New Optimization Models and Methods for Classical, \newline Infinite-Dimensional, and Online Fisher Markets}
 
 \section{Postdoctoral Advising}
 % \cventry{2022-}{Co-advised with Jay Sethuraman}{Neel Karia}{IEOR, Columbia University}{}{}{}
