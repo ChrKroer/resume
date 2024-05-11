@@ -212,14 +212,14 @@ Last update: \today
 
 
 \section{Publications}
+
+\ifpromotion
 Because I publish in multiple related disciplines, some papers are ordered
 alphabetically, and some are ordered as ``lead authors first, senior authors last.''
 I denote alphabetical papers with $^\alpha$ and lead authors first papers with
 $^\beta$.
 A few papers are ordered by contribution, and are marked with $^\gamma$.
 I have \underline{underlined} names of current and former Columbia students.
-
-\ifpromotion
 
 Citation metrics as of Jan 18th, 2024 (source: google scholar):
 \begin{itemize}
@@ -250,23 +250,25 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 
 \nociteworking{*}
 \bibliographystyleworking{unsrt}
-\bibliographyworking{working_papers}
 
 \nocitepublishedjournal{*}
 \bibliographystylepublishedjournal{unsrt}
 \nocitepublishedconf{*}
 \bibliographystylepublishedconf{unsrt}
-% \ifpromotion
-\bibliographypublishedjournal{christian_kroer_publications_journal}
-\bibliographypublishedconf{christian_kroer_publications_conference}
-% \else
-% \bibliographypublishedjournal{christian_kroer_publications_journal}
-% \bibliographypublishedconference{christian_kroer_publications_conference}
-% \fi
-
 \nociteworkshop{*}
 \bibliographystyleworkshop{unsrt}
+\ifpromotion
+\bibliographyworking{working_papers}
+\bibliographypublishedjournal{christian_kroer_publications_journal}
+\bibliographypublishedconf{christian_kroer_publications_conference}
 \bibliographyworkshop{workshop_papers}
+\else
+\bibliographyworking{working_papers_public}
+\bibliographypublishedjournal{christian_kroer_publications_journal_public}
+\bibliographypublishedconf{christian_kroer_publications_conference_public}
+\bibliographyworkshop{workshop_papers_public}
+\fi
+
 
 % \nocite{*}
 % \bibliographystyle{unsrt}

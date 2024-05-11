@@ -1,2 +1,4 @@
 python strip_promotion_stuff.py christian_kroer_publications_journal.bib > christian_kroer_publications_journal_public.bib
-python strip_promotion_stuff.py christian_kroer_publications_conference.bib > christian_kroer_publications_conferences_public.bib
+python strip_promotion_stuff.py christian_kroer_publications_conference.bib > christian_kroer_publications_conference_public.bib
+python strip_promotion_stuff.py working_papers.bib > working_papers_public.bib
+python strip_promotion_stuff.py workshop_papers.bib > workshop_papers_public.bib
