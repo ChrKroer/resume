@@ -1,0 +1,228 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage[scale=0.75]{geometry}
+
+% Biblatex bibliography setup
+% \usepackage[style=authoryear,sorting=ydnt,dashed=false]{biblatex}
+% \addbibresource{christian_kroer_publications.bib}
+% \renewbibmacro*{date}{}
+% \renewbibmacro*{date+extrayear}{}
+% \renewbibmacro*{issue+date}{}
+% \newcommand*{\bibyear}{}
+% \usepackage[%
+%   backend=biber,
+%   defernumbers=true,
+%   sorting=ydnt,         % Sort by year (descending), name, title
+%   maxbibnames=99,
+% sorting=none,         % Do not sort at all. All entries are processed in citation order.
+% ]{biblatex}
+% \addbibresource{working_papers.bib} % to use bib file created with filecontents
+% \addbibresource{christian_kroer_publications.bib} % to use bib file created with filecontents
+% \addbibresource{workshop_papers.bib} % to use bib file created with filecontents
+% \defbibfilter{published}{
+%   type=article or
+%   type=inproceedings
+% }
+
+% Define \cvdoublecolumn, which sets its arguments in two columns without any labels
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+    }%
+}
+
+% usage: \cvreference{name}{address line 1}{address line 2}{address line 3}{address line 4}{e-mail address}{phone number}
+% Everything but the name is optional
+% If \addresssymbol, \emailsymbol or \phonesymbol are specified, they will be used.
+% (Per default, \addresssymbol isn't specified, the other two are specified.)
+% If you don't like the symbols, remove them from the following code, including the tilde ~ (space).
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+
+\setlength{\hintscolumnwidth}{1.8cm}                % if you want to change the width of the column with the dates
+% \setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\renewcommand*{\namefont}{\fontsize{38}{40}\mdseries\upshape}
+\name{Christian}{Kroer}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+% \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+% \phone[mobile]{+1~(412)~667~0870}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{christian.kroer@columbia.edu}                               % optional, remove / comment the line if not wanted
+\homepage{www.christiankroer.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{chrkroer}                        % optional, remove / comment the line if not wanted
+% \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{ChrKroer}                              % optional, remove / comment the line if not wanted
+% \extrainfo{US green card holder}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+
+\makeatletter
+% \newcommand{\citesinthissection}[1]{\xdef\@totalcites{#1}}
+% % http://tex.stackexchange.com/q/66829/5764
+% \newcounter{numbibentries}
+% \renewbibmacro*{finentry}{\stepcounter{numbibentries}\finentry}
+% % http://tex.stackexchange.com/q/123805/5764
+% \defbibenvironment{bibliography}
+%   {\list
+%      {\printtext[labelnumberwidth]{% label format from numeric.bbx
+%         \printfield{prefixnumber}%
+%         \number\numexpr\@totalcites-\abx@field@labelnumber+1\relax}}
+%      {\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+%       \setlength{\labelwidth}{\hintscolumnwidth}%
+%       \setlength{\labelsep}{\separatorcolumnwidth}%
+%       \leftmargin\labelwidth%
+%       \advance\leftmargin\labelsep}%
+%       \sloppy\clubpenalty4000\widowpenalty4000}
+%   {\endlist}
+%   {\item}
+% \makeatother
+
+
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+% \defbibenvironment{bibliography}
+%   {\list
+%      {\iffieldequals{year}{\bibyear}
+%         {}
+%         {\printfield{year}%
+%          \savefield{year}{\bibyear}}}
+%      {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+%       \setlength{\labelwidth}{\hintscolumnwidth}%
+%       \setlength{\labelsep}{\separatorcolumnwidth}%
+%       \setlength{\itemsep}{\bibitemsep}%
+%       \leftmargin\labelwidth%
+%       \advance\leftmargin\labelsep}%
+%       \sloppy\clubpenalty4000\widowpenalty4000}
+%   {\endlist}
+%   {\item}
+
+% bibliography with mutiple entries
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\begin{centering}
+\end{centering}
+
+\section{Research interests}
+\cvitem{Fields}{artificial intelligence, optimization, game theory. Subareas: equilibrium computation, market design, auctions, first-order methods, online learning, machine learning, robust optimization.}
+\section{Education}
+\cventry{2012--2018}{Ph.D. in computer science}{Carnegie Mellon University}{Pittsburgh}{USA}{}  % arguments 3 to 6 can be left empty
+\cventry{2009--2012}{M.Sc. IT - software development}{IT University of Copenhagen}{}{Denmark}{}
+\cventry{2006--2009}{B.A. human-centered informatics}{Aalborg University}{Aalborg}{Denmark}{}
+
+% \section{Master thesis}
+% \cvitem{title}{\emph{Title}}
+% \cvitem{supervisors}{Supervisors}
+% \cvitem{description}{Short thesis abstract}
+
+\section{Most Relevant Employment and Internships}
+%\subsection{Vocational}
+\cventry{2019--}{Columbia University, Industrial Engineering and Operations
+  Research}{Associate Professor (without tenure, Assistant Prof 2019-2024)}{}{}{}{}
+\cventry{2019--2024}{Meta, Core Data Science}{Research Scientist (1 day per week)}{}{}{}{}
+\cventry{2018--2019}{Facebook, Core Data Science}{Postdoc}{}{}{}{}
+
+
+% \section{Consulting Work}
+% \cventry{2022--2024}{Meta, Core Data Science}{Research Scientist (1 day per week)}{}{}{}{}
+% \cventry{2016--2018}{Facebook, Core Data Science}{Research Scientist (part-time position)}{}{}{}{}
+% General description no longer than 1--2 lines.\newline
+  % {}  %
+% Detailed achievements:%
+% \begin{itemize}%
+% \item Achievement 1;
+% \item Achievement 2, with sub-achievements:
+%   \begin{itemize}%
+%   \item Sub-achievement (a);
+%   \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+%     \begin{itemize}
+%     \item Sub-sub-achievement i;
+%     \item Sub-sub-achievement ii;
+%     \item Sub-sub-achievement iii;
+%     \end{itemize}
+%   \item Sub-achievement (c);
+%   \end{itemize}
+% \item Achievement 3.
+% \end{itemize}}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+% \subsection{Miscellaneous}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Most Relevant Honors and Awards}
+\cvitem{}{Best paper award, GameSec 2024}
+\cvitem{}{National Science Foundation CAREER Award, 2023-2028}
+\cvitem{}{Office of Naval Research Young Investigator Award, 2022-2025}
+% \cvitem{}{Facebook Fellowship in economics and computation, 2016 - 2018}
+% \cvitem{2016 - 2018}{Facebook Fellowship in economics and computation. Full tuition, fees, stipend, and travel grant for two
+%   years, {\$}183,168.}
+% \cvitem{}{Informs Computing Society Student Paper Competition, runner-up 2017}
+% \cvitemwithcomment{Language 2}{Skill level}{Comment}
+% \cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+
+
+\nocite{chakrabarti2024extensive}
+\nocite{cerny2024layered}
+\nocite{mcelfresh2023matching}
+% \nocite{gao2023infinite_journal}
+\nocite{castiglioni2024online}
+\nocite{kroer2018robust}
+
+\bibliographystyle{unsrt}
+\bibliography{christian_kroer_publications_journal_public,christian_kroer_publications_conference_public}
+% \nocitepublishedjournal{*}
+% \bibliographystylepublishedjournal{unsrt}
+% \nocitepublishedconf{*}
+% \bibliographystylepublishedconf{unsrt}
+% \nociteworkshop{*}
+% \bibliographystyleworkshop{unsrt}
+% \ifpromotion
+% \bibliographyworking{working_papers}
+% \bibliographypublishedjournal{christian_kroer_publications_journal}
+% \bibliographypublishedconf{christian_kroer_publications_conference}
+% \bibliographyworkshop{workshop_papers}
+% \else
+% \bibliographyworking{working_papers_public}
+% \bibliographypublishedjournal{christian_kroer_publications_journal_public}
+% \bibliographypublishedconf{christian_kroer_publications_conference_public}
+% \bibliographyworkshop{workshop_papers_public}
+% \fi
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
