@@ -74,7 +74,7 @@
 
 \newif\ifpromotion
 \promotiontrue
-% \promotionfalse
+\promotionfalse
 
 
 
@@ -154,7 +154,9 @@ Last update: \today
 
 \cvitem{Specific}{equilibrium computation, market design, auctions, first-order methods, online learning, machine learning, robust optimization.}
 \section{Education}
-\cventry{2012--2018}{Ph.D. in computer science (advisor: Tuomas Sandholm)}{Carnegie Mellon University}{Pittsburgh}{PA, USA}{}  % arguments 3 to 6 can be left empty
+\cventry{2012--2018}{Ph.D. in computer science}{Carnegie Mellon
+  University}{Pittsburgh}{PA, USA}{Thesis title: Large-Scale Sequential Imperfect-Information Game Solving: Theoretical Foundations and
+  Practical Algorithms with Guarantees. Advisor: Tuomas Sandholm}  % arguments 3 to 6 can be left empty
 \cventry{2009--2012}{M.Sc. IT - software development and technology}{IT University of Copenhagen}{Copenhagen}{Denmark}{}
 \cventry{2006--2009}{B.A. human-centered informatics}{Aalborg University}{Aalborg}{Denmark}{}
 
@@ -177,8 +179,8 @@ Last update: \today
 \cventry{2010--2011}{Netmester A/S}{Systems Developer}{}{}{}{}
 
 
-% \section{Consulting Work}
-% \cventry{2022--2024}{Meta, Core Data Science}{Research Scientist (1 day per week)}{}{}{}{}
+\section{Consulting Work}
+\cventry{2022--2024}{Meta, Core Data Science}{Research Scientist (1 day per week)}{}{}{}{}
 % \cventry{2016--2018}{Facebook, Core Data Science}{Research Scientist (part-time position)}{}{}{}{}
 % General description no longer than 1--2 lines.\newline
   % {}  %
@@ -224,24 +226,25 @@ $^\beta$.
 A few papers are ordered by contribution, and are marked with $^\gamma$.
 I have \underline{underlined} names of current and former Columbia students.
 
-Citation metrics as of March 10th 2025 (source: google scholar):
+Citation metrics as of April 14th 2025 (source: google scholar):
 \begin{itemize}
-\item Total citations: 2211
+\item Total citations: 2245
 \item h-index: 29
-\item i10-index: 57
-\item Citations in the year 2024: 568
+\item i10-index: 58
+\item Citations in the year 2024: 556
 \end{itemize}
 
 I primarily publish in two communities: the AI, economics, and computation
 community, and the operations research community.
-Below I list the numerical metrics for impact, beyond the citation metrics above.
+Below I list the ``highest-tier'' venues for each of those two fields.
 For the AI, economics and computation community, impact is primarily measured by publication in top-tier
 conference venues, which are (see also \url{www.csrankings.org}, which lists the
 same conferences as those ``counted'' towards their metrics):
 \begin{itemize}
 \item AI: AAAI, IJCAI
 \item ML: NeurIPS, ICML, ICLR
-\item Economics and Computation: EC, WINE
+\item Economics and Computation: EC, WINE (EC is significantly more prestigious
+  than WINE)
 \end{itemize}
 For OR, impact is primarily measured by publication in the top-tier journals:
 \begin{itemize}
@@ -305,6 +308,7 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 
 \section{Invited talks}
 \vspace{2mm}
+\cvitem{2025}{Invited speaker, workshop on Online Learning and Economics at EC'25}
 \cvitem{2025}{University of Illinios Urbana-Champaign ISE Seminar}
 \cvitem{2025}{Tippie College of Business Seminar}
 \cvitem{2024}{MIT ORC Seminar}
@@ -351,23 +355,30 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 % \cventry{2020 Fall}{BS class, Professor}{Art of Engineering}{Columbia University}{}{}{}
 
 \ifpromotion
+  \newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+  \newcommand*{\mystrut}{\rule{0pt}{2.5ex}}
+  $\dagger$ denotes midsemester evaluations either due to being a current
+  course, or because of no final evaluations because of covid. I did not teach
+  in spring 2023 due to parental leave.
   \begin{center}
-    \scriptsize
-    \begin{tabular}{ l l c c c c }
-      Course & Semester & Course Quality & Instructor Quality & Enrollment & Responses \\
+    \small
+    \begin{tabular}{ l l c c  c c }
+             % &          & \multicolumn{2}{c}{Quality}     &         & \\
+      Course & Semester & \specialcell{Course\\quality}\hspace{2mm} & \specialcell{Instructor\\quality}\hspace{2mm} & Enroll.\hspace{2mm} & Responses \\
       \hline
-      IEOR 4525 Machine Learning for ORFE (in progress)  & 2025 Spring & n/a & n/a & n/a & n/a \\ 
-      IEOR 4530 AI, Games, and Markets  & 2024 Fall & 3.67 & 4.00 & 22 & 9 \\ 
-      IEOR 4525 Machine Learning for ORFE\hspace{1mm}  & 2024 Spring & 4.27 & 4.20 & 38 & 15 \\ 
-      IEOR 4530 AI, Games, and Markets  & 2023 Fall & 3.16 & 3.44 & 55 & 25 \\ 
-      IEOR 4525 Machine Learning for ORFE\hspace{1mm}  & 2022 Fall & 4.07 & 4.21 & 76 & 43 \\ 
-      IEOR 4525 Machine Learning for ORFE   & 2022 Spring & 4.17 & 4.29 & 90 & 48 \\ 
-      IEOR 4530 AI, Games, and Markets  & 2022 Spring & 4.18 & 4.35 & 36 & 17\\ 
+      IEOR 4004 Optimizition Models and Methods\hspace{3mm}   & 2019 Fall & 3.94 & 4.03 & 158 & 108\\ 
+      IEOR 4525 Machine Learning for ORFE$^\dagger$  & 2025 Spring\hspace{2mm} & 4.67 & 4.67 & 37 & 9 \\ 
       IEOR 4525 Machine Learning for ORFE  & 2021 Fall & 4.21 & 4.26 & 94 & 62 \\ 
       IEOR 4525 Machine Learning for ORFE   & 2021 Spring & 3.91 & 4.13 & 82 & 45\\ 
       IEOR 4525 Machine Learning for ORFE   & 2020 Fall & 4.22 & 4.40 & 105 & 67\\ 
-      IEOR 8100 Econ, AI, and Optimization (covid evals)\hspace{1mm}   & 2020 Spring & 4.60 & 4.40 & 24 & 10\\ 
-      IEOR 4004 Optimizition Models and Methods   & 2019 Fall & 3.94 & 4.03 & 158 & 108\\ 
+      IEOR 4525 Machine Learning for ORFE\hspace{1mm}  & 2024 Spring & 4.27 & 4.20 & 38 & 15 \\ 
+      IEOR 4525 Machine Learning for ORFE\hspace{1mm}  & 2022 Fall & 4.07 & 4.21 & 76 & 43 \\ 
+      IEOR 4525 Machine Learning for ORFE   & 2022 Spring & 4.17 & 4.29 & 90 & 48 \\ 
+      IEOR 4530 AI, Games, and Markets  & 2024 Fall & 3.67 & 4.00 & 22 & 9 \\ 
+      IEOR 4530 AI, Games, and Markets  & 2023 Fall & 3.16 & 3.44 & 55 & 25 \\ 
+      IEOR 4530 AI, Games, and Markets  & 2022 Spring & 4.18 & 4.35 & 36 & 17\\ 
+      IEOR 8100 Econ, AI, and Optimization$^\dagger$\hspace{1mm}   & 2020 Spring & 4.60 & 4.40 & 24 & 10\\ 
     \end{tabular}
   \end{center}
 \else
@@ -389,54 +400,61 @@ For OR, impact is primarily measured by publication in the top-tier journals:
 
 \section{Ph.D. Advising - Current Students}
 % \cventry{2022-}{Co-advised with Jay Sethuraman}{Neel Karia}{IEOR, Columbia University}{}{}{}
-\cventry{2024-}{}{David Yang (main advisor: Tianyi Lin)}{IEOR, Columbia University}{}{}{}
-\cventry{2024-}{}{Zongjun Yang}{IEOR, Columbia University}{}{}{}
-\cventry{2023-}{}{Fatih Selim Aktas}{IEOR, Columbia University}{}{}{}
-\cventry{2023-}{}{Salam Afiouni}{IEOR, Columbia University}{}{}{}
-\cventry{2022-}{}{Tianlong Nan}{IEOR, Columbia University}{}{}{}
-\cventry{2021-}{}{Darshan Chakrabarti}{IEOR, Columbia University}{}{}{}
+\cventry{2024-2029}{}{David Yang (coadvisor: Tianyi Lin)}{IEOR, Columbia University}{}{}{}
+\cventry{2024-2029}{}{Zongjun Yang}{IEOR, Columbia University}{}{}{}
+\cventry{2023-2028}{}{Fatih Selim Aktas}{IEOR, Columbia University}{}{}{}
+\cventry{2023-2028}{}{Salam Afiouni}{IEOR, Columbia University}{}{}{}
+\cventry{2022-2027}{}{Tianlong Nan}{IEOR, Columbia University}{}{}{}
+\cventry{2021-2026}{}{Darshan Chakrabarti}{IEOR, Columbia University}{}{}{}
 % \cventry{2019-}{Co-advised with Santiago Balseiro}{Rachitesh Kumar}{IEOR, Columbia University}{}{}{}
 
 \section{Ph.D. Advising - Graduated Students}
-  \cventry{2021-2025}{First position: Reserach Scientist, Meta}
+  \cventry{2021-2025}{Position: Research Scientist, Meta}
   {Luofeng Liao}
-  % {\scriptsize New Optimization Models and Methods for Classical, Infinite-Dimensional, and Online Fisher Markets}
   {IEOR, Columbia University}
   {}
   {Thesis title: Statistical Inference in Competitive Equilibrium}
-  \cventry{2019-2024}{First position: Ass. Professor, Tepper School of Business}
+  \cventry{2019-2024}{Position: Assistant Professor, Tepper School of Business}
   {Rachitesh Kumar}
-  % {\scriptsize New Optimization Models and Methods for Classical, Infinite-Dimensional, and Online Fisher Markets}
   {IEOR, Columbia University}
   {}
   {Thesis title: Budget Management in Auctions: Bidding Algorithms and Equilibrium Analysis}
-% \cventry{2019-2022}{}{Yuan Gao}{IEOR, Columbia University}{}{Current Position:
-%   Data Scientist, Microsoft}{\scriptsize New Optimization Models and Methods
-
-%     for Classical, Infinite-Dimensional, and Online Fisher Markets}
-  \cventry{2019-2022}{First position: Data Scientist, Microsoft}
+  \cventry{2019-2022}{Position: Senior Data Scientist, Microsoft}
   {Yuan Gao}
-  % {\scriptsize New Optimization Models and Methods for Classical, Infinite-Dimensional, and Online Fisher Markets}
   {IEOR, Columbia University}
   {}
   {Thesis title: New Optimization Models and Methods for Classical, \newline Infinite-Dimensional, and Online Fisher Markets}
 
 \section{Postdoctoral Advising}
-% \cventry{2022-}{Co-advised with Jay Sethuraman}{Neel Karia}{IEOR, Columbia University}{}{}{}
-\cventry{2023-}{Coadvised with Garud Iyengar}{Jakub Cerny}{IEOR, Columbia University}{}{}{}
-\cventry{2024-2025}{Coadvised with Garud Iyengar}{Shuvomoy Das Gupta (Rice
-  Ass. Prof.)}{IEOR, Columbia University}{}{}{}
-\cventry{2023-2024}{Coadvised with Garud Iyengar}{Chun Kai Ling (NUS Ass. Prof.)}{IEOR, Columbia University}{}{}{}
+\cventry{2023-2026}{}
+{Jakub Cerny}
+{IEOR, Columbia University}
+{}
+{Coadvised with Garud Iyengar}
+\cventry{2024-2025}{Position: Assistant Professor, Rice University}
+{Shuvomoy Das Gupta}
+{IEOR, Columbia University}
+{}
+{Coadvised with Garud Iyengar}
+\cventry{2023-2024}{Position: Assistant Professor, National University of Singapore}
+{Chun Kai Ling}
+{IEOR, Columbia University}
+{}
+{Coadvised with Garud Iyengar}
 
 \section{Visiting Ph.D. students}
 \cventry{2025-2025}{}{Francesco Emanuele Stradi}{Politecnico di Milano}{}{}{}
 \section{M.Sc. and Undergraduate Advising}
 \cventry{2021-2022}{MS}{Tianlong Nan}{IEOR, Columbia University}{}{}{}
+\ifpromotion
+\cventry{2024-2025}{BS (graduated 2022, but mentoring for PhD applications now)}{Noah Krever}{CS, Columbia University}{}{}{}
+\fi
 \cventry{2023-2024}{BS}{Zongjun Yang}{Peking University}{}{}{}
 
 \section{Awards Won by Students}
 Awards below were won by students that I advise for our joint research projects.
 
+\cvitem{2025}{Rachitesh Kumar, Honorable mention, SIGecom Doctoral Dissertation Award}
 \cvitem{2023}{Rachitesh Kumar, Finalist, INFORMS AMD Rothkopf Junior Researcher Paper Prize}
 \cvitem{2023}{Darshan Chakrabarti, NSF Graduate Research Fellowship}
 \cvitem{2022}{Rachitesh Kumar, CAIT Doctoral Fellowship. One year of full support+extension option.}
@@ -447,6 +465,9 @@ Awards below were won by students that I advise for our joint research projects.
   \begin{itemize}
   \item Andrea Celli, Information Technology at Politecnico di Milano, 2019,
   \end{itemize}
+}
+\cvitem{Grant Reviews}{
+  ONR (4-8 per year), 2023-2025
 }
 \cvitem{Conference Program Committee service}
 {
@@ -486,11 +507,11 @@ Awards below were won by students that I advise for our joint research projects.
   Information Systems Research ('21),
   International Conference on Learning Representations ('22),
   IPCO (2020),
-  Management Science ('20, '21, '22,'23,'24),
+  Management Science ('20, '21, '22, '23, '24, '25),
   Mathematical Programming ('22,'23),
   Mathematics of Operations Research ('24,'25),
-  Neurips OPT workshop ('24),
-  Operations Research ('18, '19, '20, '21, '22, '23,'24,'25),
+  Neurips OPT workshop ('24, '25),
+  Operations Research ('18, '19, '20, '21, '22, '23, '24, '25),
   JAAMAS ('15, '16),
   SODA ('22,'23),
   STOC ('22, '24)
@@ -529,6 +550,16 @@ Awards below were won by students that I advise for our joint research projects.
 \cvitem{2021, 2022}{Columbia IEOR faculty hiring committee member}
 
 \section{External Funding}
+\ifpromotion
+\textbf{Pending:}
+% , Office of Naval Research (2025 – 2027, 36 months). Lead PI (co-PIs Jay Sethuraman, Rajiv Sethi. IEOR share: $1,028,854. 
+
+\cvitem{2025-2028}{Academic Mobility and Technological Frontiers. ONR. Lead PI.
+  IEOR share: \$1,028,854}
+
+\textbf{Awarded:}
+
+\fi
 \cvitem{2023-2028}{CAREER: Fair and Efficient Market Design at Scale. NSF. Sole PI. \$600,000}
 \cvitem{2023-2026}{Red Team/Blue Team Games with Contingency Planning and
   Adversarial Team Games. Office of Naval Research. Lead PI. \$1,226,862.00 (my
