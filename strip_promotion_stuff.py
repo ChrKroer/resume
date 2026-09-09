@@ -1,6 +1,6 @@
 import sys
 def strip_all(line):
-    line = line.replace('\\sf ', '')
+    line = line.replace('\\lead ', '')
     line = line.replace('\\contrib ', '')
     line = line.replace('\\al ', '')
     line = line.replace('\\underline', '')
